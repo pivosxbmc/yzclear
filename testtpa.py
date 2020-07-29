@@ -58,7 +58,6 @@ class Tpa_Simple_Case(unittest.TestCase):
             self.Tpa.tpa_creat_case_base('310107199306238673','2020-07-28 10:00:00',i,2)#,'18312341234',self.messges.get_address(),self.messges.get_text())
             time.sleep(1)
         self.Tpa.tpa_creat_case_base('140101196404043286','2020-07-29 10:00:00',5,2)
-        self.add_img()
     @unittest.skip('现在不需要')
     def test_3search_case(self):
         '''验证搜索案件功能'''
@@ -72,7 +71,6 @@ class Tpa_Simple_Case(unittest.TestCase):
     def test_4case_detail_data(self):
         '''案件详情'''
         result_text = self.Tpa.tpa_case_detail_base('1234','测试内容123456测试','测试内容64321测试')
-        self.add_img()
         self.assertIn('',result_text,msg='断言')
         self.add_img()
     def test_6case(self):
@@ -82,6 +80,8 @@ class Tpa_Simple_Case(unittest.TestCase):
     def test_9exit_quit_case(self):
         '''验证是否可以正常退出'''
         self.Tpa.tap_exit_base()
+    def test_test9(self):
+        pass
 
 
 
