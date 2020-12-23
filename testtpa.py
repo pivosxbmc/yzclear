@@ -83,6 +83,14 @@ class Tpa_Simple_Case(unittest.TestCase):
     def test_test9(self):
         pass
         pass
+def get_goods_name():
+    url = 'https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/133009054770?fieldgroups=full&limit=20'
+    User_Agent =  r'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'   
+    newReport_headers2={'Content-Type':'application/json','Cookie':r'ebay=%5Esbf%3D%23%5E;Domain=.ebay.com;Path=/',"user-agent":User_Agent}
+    r = requests.get(url=url,headers= newReport_headers2,verify=False)
+    print(r.text)
+    print('-------------------------------------------------------------------')
+    datatext = json.loads(r.text)
 
 
 
